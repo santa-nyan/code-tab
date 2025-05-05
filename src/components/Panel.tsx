@@ -1,12 +1,7 @@
 import React, { memo } from "react";
-
-import {
-  AddonPanel,
-  SyntaxHighlighter,
-} from "storybook/internal/components";
-import { TabsState } from "storybook/internal/components";
-import { useParameter } from "storybook/internal/manager-api";
-import { useTheme } from "storybook/internal/theming";
+import { useTheme } from "@storybook/theming";
+import { useParameter } from "@storybook/manager-api";
+import { AddonPanel, SyntaxHighlighter, TabsState } from "@storybook/components";
 
 
 interface PanelProps {
