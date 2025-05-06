@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Button } from "./Button";
+import { CustomContainer, CustomDocsPage } from "../components/CustomDocs";
 
 const TS_CODE = `@Component({
   selector: 'example-ask-confirmation-default',
@@ -22,10 +23,13 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     backgroundColor: { control: "color" },
   },
-  tags: ["autodocs"],
   parameters: {
+    docs: {
+      page: CustomDocsPage,
+      container: CustomContainer,
+    },
     code: {
-      html: `<Button>Hello Button</Button>`,
+      html: `<Button>Primary</Button>`,
       ts: TS_CODE
     },
   },
@@ -38,6 +42,12 @@ export const Primary: Story = {
   args: {
     primary: true,
     label: "Button",
+  },
+  parameters: {
+    code: {
+      html: `<Button>Primary</Button>`,
+      ts: TS_CODE
+    },
   },
 };
 
